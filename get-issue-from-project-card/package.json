@@ -1,5 +1,0 @@
-{
-    "name": "get-issue-from-project-card",
-    "private": true,
-    "main": "./dist/index.js"
-}

@@ -20,3 +20,4 @@ jobs:
           owner: rafaelfbs
           repo: actions
           issue: ${{ steps.get_issue.outputs.issue }}
+          label: test

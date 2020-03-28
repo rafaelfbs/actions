@@ -1,0 +1,12 @@
+name: 'Labeler'
+description: 'Labels an issue or PR'
+inputs:
+  issue:
+    description: 'The issue id'
+    required: true
+  label:
+    description: 'The label'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'

@@ -9,4 +9,14 @@ jobs:
     name: Auto card labeler
     runs-on: ubuntu-latest
     steps:
+      - uses: rafaelfbs/actions/get-issue-from-project-card@master
+        id: get_issue
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          card: ${{ github.event.project_card.id }}
       - uses: rafaelfbs/actions/labeler@master
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          owner: rafaelfbs
+          repo: actions
+          issue: ${{ steps.get_issue.outputs.issue }}

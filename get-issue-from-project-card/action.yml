@@ -1,0 +1,15 @@
+name: 'Get issue from project card'
+description: 'Gets an issue from project card'
+inputs:
+  token:
+    description: 'The token'
+    required: true
+  card:
+    description: 'The card id'
+    required: true
+outputs:
+  issue:
+    description: 'The issue id'
+runs:
+  using: 'node12'
+  main: 'index.js'

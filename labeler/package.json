@@ -1,0 +1,5 @@
+{
+    "name": "labeler",
+    "private": true,
+    "main": "./dist/index.js"
+}

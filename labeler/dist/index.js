@@ -24738,7 +24738,6 @@ async function run() {
 
         core.info(`Added label "${label}" to issue #${issue} in repository ${owner}/${repo}.`);
     } catch (error) {
-        core.error(error);
         core.setFailed(error.message);
     }
 }

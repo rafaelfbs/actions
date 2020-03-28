@@ -1935,12 +1935,11 @@ async function run() {
         const cardId = core.getInput('card',  { required: true });
 
         const client = new github.GitHub(token);
-        const card = await client.projects.getCard({ card_id: cardId });
+        const card = await client.projects.getCard({ card_id: cardId.toString() });
         const issueId = extractIssueFromCardContentUrl(card.data.content_url);
 
         core.setOutput('issue', issueId.toString());
     } catch (error) {
-        core.error(error);
         core.setFailed(error.message);
     }
 }

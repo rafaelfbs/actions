@@ -1921,7 +1921,7 @@ const core = __webpack_require__(435);
 const github = __webpack_require__(342);
 
 function extractIssueFromCardContentUrl(contentUrl) {
-    const match = url.match(/issues\/(\d+)$/);
+    const match = contentUrl.match(/issues\/(\d+)$/);
 	if (!match) {
 		throw new Error('Failed to get issue id');
 	}

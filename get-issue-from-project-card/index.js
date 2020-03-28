@@ -2,7 +2,7 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 
 function extractIssueFromCardContentUrl(contentUrl) {
-    const match = url.match(/issues\/(\d+)$/);
+    const match = contentUrl.match(/issues\/(\d+)$/);
 	if (!match) {
 		throw new Error('Failed to get issue id');
 	}
